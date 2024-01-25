@@ -36,7 +36,11 @@ body, html{
     transition-duration: 0.5s;
 }
 
-.about:hover, .caseStudy:hover, .contactUs:hover{
+.about{
+    color: #26035D;
+}
+
+.about:hover, .caseStudy:hover{
     color: #7747FF;
 }
 
@@ -165,6 +169,33 @@ body, html{
 
 .title .position{
     color: grey;
+}
+
+.cases{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.case{
+    display: flex;
+    gap: 100px;
+}
+
+.case .info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.tag{
+    background-color: #7747FF;
+    color: white;
+    padding: 12px 14px 12px 14px;
+    border-radius: 25px;
+    width: fit-content;
 }
 
 @keyframes pulse{
