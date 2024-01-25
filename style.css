@@ -16,6 +16,7 @@ body, html{
     background-color: #FAF7F0;
     color: #26035D;
     overflow: auto;
+    min-height: 100%;
 }
 
 .nav{
@@ -34,9 +35,6 @@ body, html{
 .links a{
     text-decoration: none;
     transition-duration: 0.5s;
-}
-
-.about{
     color: #26035D;
 }
 
@@ -88,6 +86,10 @@ body, html{
 
 .section{
     padding: 40px 100px 40px 100px;
+}
+
+.content{
+    display: none;
 }
 
 .services h3{
@@ -196,6 +198,31 @@ body, html{
     padding: 12px 14px 12px 14px;
     border-radius: 25px;
     width: fit-content;
+}
+
+.getintouch h1{
+    width: 100%;
+}
+
+.offices{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    border-top: grey 2px solid;
+    padding-top: 100px;
+}
+
+.office{
+    display: flex;
+    flex-direction: column;
+}
+
+.office .title{
+    color: grey;
+}
+
+.office .address{
+    font-size: 32px;
 }
 
 @keyframes pulse{
