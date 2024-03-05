@@ -225,6 +225,21 @@ body, html{
     font-size: 32px;
 }
 
+.footer{
+    background-color: #26035D;
+    color: #FAF7F0;
+}
+
+.footerLogo{
+    filter: brightness(0) invert(1);
+}
+
+.contactInfoFooter{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
 @keyframes pulse{
     50%{
         width: 550px;
