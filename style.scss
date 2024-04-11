@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$primary: #26035D;
+$secondary: #7747FF;
+$offWhite: #FAF7F0;
+
+$font: 'Roboto', sans-serif;
+
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    font-family: $font;
+    background-color: $offWhite;
+    color: $primary;
+    overflow: auto;
+    min-height: 100%;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 30px 100px 30px 100px;
+}
+
+.links{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+
+    a{
+        text-decoration: none;
+        transition-duration: 0.5s;
+        color: $primary;
+    }
+}
+
+.about:hover, .caseStudy:hover{
+    color: $secondary;
+}
+
+.contactUs{
+    border: 1px solid $primary;
+    border-radius: 6px;
+    padding: 14px 20px 14px 20px;
+
+    &:hover{
+        background-color: $secondary;
+        color: $offWhite;
+    }
+}
+
+.hero{
+    background: url('images/index/hero.jpg') no-repeat;     
+    background-size: cover;
+    width: 100%;
+    height: 1400px;
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 108px);
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 108px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 108px);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1; 
+    }
+}
+
+.heroText{
+    font-weight: 600;
+    font-size: 60px;
+    width: 850px;
+    text-align: center;
+    color: #FAF7F0;
+    letter-spacing: 5px;
+    z-index: 2;
+}
+
+.section{
+    padding: 40px 100px 40px 100px;
+}
+
+.content{
+    display: none;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h3{
+        font-size: 48px;
+    }
+}
+
+.serviceList{
+    display: flex;
+    flex-direction: column;
+}
+
+.sInside{
+    border-bottom: solid 2px $primary;
+}
+
+.fInside{
+    border-top: solid 2px $primary;
+    border-bottom: solid 2px $primary;
+}
+
+.greySection{
+    background-color: rgb(173, 173, 173);
+    display: grid;
+    place-items: center;
+    height: 650px;
+}
+
+.circle{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: rgba(132, 148, 182, 0.5);
+    display: grid;
+    place-items: center;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.circle .heroText{
+    width: 300px;
+    animation: spacing 2s infinite;
+}
+
+.aboutHead h1{
+    width: 200px;
+    font-size: 100px;
+}
+
+.aboutHead p{
+    font-size: 30px;
+}
+
+.founders{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.founder{
+    display: flex;
+    gap: 50px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.title .name{
+    font-size: 30px;
+}
+
+.title .position{
+    color: grey;
+}
+
+.cases{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.case{
+    display: flex;
+    gap: 100px;
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+    }
+}
+
+.tag{
+    background-color: $secondary;
+    color: white;
+    padding: 12px 14px 12px 14px;
+    border-radius: 25px;
+    width: fit-content;
+}
+
+.getintouch h1{
+    width: 100%;
+}
+
+.offices{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    border-top: grey 2px solid;
+    padding-top: 100px;
+}
+
+.office{
+    display: flex;
+    flex-direction: column;
+
+    .title{
+        color: grey;
+    }
+
+    .address{
+        font-size: 32px;
+    }
+}
+
+.footer{
+    background-color: $primary;
+    color: $offWhite;
+}
+
+.footerLogo{
+    filter: brightness(0) invert(1);
+}
+
+.contactInfoFooter{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+@keyframes pulse{
+    50%{
+        width: 550px;
+        height: 550px;
+    }
+}
+
+@keyframes spacing{
+    50%{
+        letter-spacing: 10px;
+    }
+}
